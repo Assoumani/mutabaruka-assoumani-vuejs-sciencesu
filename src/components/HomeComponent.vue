@@ -6,7 +6,6 @@
       <div class="row">
 
         <div >
-
           <div class="card mt-4">
             <img class="card-img-top img-fluid" src="img/office.jpg" alt="">
             <div class="card-body">
@@ -30,7 +29,9 @@
 
 <script>
 export default {
-  name: "HomeComponent"
+  name: "HomeComponent",
+  data: ()=>({
+  })
 }
 </script>
 

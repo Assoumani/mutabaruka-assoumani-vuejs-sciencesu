@@ -15,12 +15,15 @@
             <div class="card" >
               <ul class="list-group list-group-flush text-center">
 
-                <li class="list-group-item" > L'équipe R&D  🧾
-                  <a href="oneteam.html" class="btn btn-secondary btn-sm" role="button">Voir</a>
+                <li v-for="(group, index) in groups"
+                    :key="index"
+                    class="list-group-item" >
+                  L'équipe {{ group.title }}  {{group.icon}}
+                  <button @click="groupDetails(group.id)" class="btn btn-secondary btn-sm" role="button">Voir</button>
                 </li>
-                <li class="list-group-item" > L'équipe Marketing 💥
-                  <a href="oneteam.html" class="btn btn-secondary btn-sm" role="button">Voir</a>
-                </li>
+<!--                <li class="list-group-item" > L'équipe Marketing 💥-->
+<!--                  <a href="oneteam.html" class="btn btn-secondary btn-sm" role="button">Voir</a>-->
+<!--                </li>-->
 
               </ul>
             </div>
@@ -42,8 +45,21 @@
 </template>
 
 <script>
+import {recipientsGroup} from "../../public/js/recipientsGroup";
 export default {
-  name: "TeamComponent"
+  name: "TeamComponent",
+  data: ()=>({
+    groups: recipientsGroup
+  }),
+  methods: {
+    groupDetails(id){
+      this.$router.push({
+        name:'TeamDetails',
+        params:{teamId:id}
+      })
+
+    }
+  }
 }
 </script>
 
