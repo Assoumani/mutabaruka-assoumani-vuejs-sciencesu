@@ -7,7 +7,7 @@
 
         <div >
           <div class="card mt-4">
-            <img class="card-img-top img-fluid" src="img/office.jpg" alt="">
+            <img class="card-img-top img-fluid" src="../assets/img/office.jpg" alt="">
             <div class="card-body">
               <h3 class="card-title">Welcome to Sciences-U Data Company </h3>
               <h4>Have a nice lugat coffee ?</h4>
